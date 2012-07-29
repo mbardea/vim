@@ -7,6 +7,7 @@ set hidden
 set nowrap
 set history=1000
 set guioptions-=T
+set guioptions-=m
 set title
 set scrolloff=3
 set hlsearch
@@ -31,6 +32,7 @@ call pathogen#helptags()
 
 "let mapleader = ","
 nmap <leader>q :bd<cr>
+nmap <leader>w <c-w><c-w>
 nmap <silent> <leader>df gf<leader>diff<cr>
 "set nobackup
 "set noswapfile
@@ -42,7 +44,7 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap <tab> %
 vnoremap <tab> %
-inoremap jj <esc>
+"inoremap jj <esc>
 
 "For surround
 "nmap s      <Nop>
@@ -90,8 +92,18 @@ filetype plugin indent on
 
 set listchars=tab:>-,trail:·,eol:$
 "nmap <silent> <leader>s :set nolist!<CR>
+"
+"
+
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+"colorscheme solarized
 
 colorscheme molokai2
+"colorscheme solarized
 runtime macros/matchit.vim
 
 :map <Leader>diff :VCSVimDiff<cr>
@@ -111,6 +123,9 @@ nmap <F6> :cp<enter>
 nmap <F7> :cn<enter>
 nmap <F8> :cfile build_log<cr>:copen<cr>/error<cr>
 nmap <leader>l :view cscope.files<cr>/
+vmap gy "+y
+map  gp "+p
+map  gP "+P
 
 runtime macros/gdb_mappings.vim
 
@@ -138,5 +153,7 @@ command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>nt :NERDTreeToggle<cr>
+nnoremap <leader>nf :NERDTreeFind<cr>
 
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
+
