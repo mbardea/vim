@@ -44,7 +44,9 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap <tab> %
 vnoremap <tab> %
-"inoremap jj <esc>
+
+nmap <leader>wh VimwikiAll2HTML<cr>
+inoremap jj <esc>
 
 "For surround
 "nmap s      <Nop>
@@ -156,4 +158,12 @@ nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
 
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
+nmap <leader>todo :e ~/vimwiki/TODO.wiki<cr>
+
+if has("gui_running")
+  colorscheme solarized
+  "set guifont=Lucida_Console:h8:cDEFAULT
+  "set guicursor=a:blinkon0
+  "set guioptions=bgmprT
+endif 
 
