@@ -26,6 +26,7 @@ set smarttab
 set backspace=indent,eol,start
 set wildmenu
 set t_Co=256
+"set clipboard=unnamed
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -159,6 +160,9 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
 nmap <leader>todo :e ~/vimwiki/TODO.wiki<cr>
+
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 if has("gui_running")
   colorscheme solarized
