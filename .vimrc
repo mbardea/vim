@@ -33,6 +33,7 @@ call pathogen#helptags()
 
 "let mapleader = ","
 nmap <leader>q :bd<cr>
+nmap <leader>xx :qa!<cr>
 nmap <leader>w <c-w><c-w>
 nmap <silent> <leader>df gf<leader>diff<cr>
 "set nobackup
