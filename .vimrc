@@ -99,15 +99,19 @@ set listchars=tab:>-,trail:·,eol:$
 "
 "
 
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-"colorscheme solarized
+" let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
+" colorscheme solarized
 
-colorscheme molokai2
-"colorscheme solarized
+" colorscheme molokai2
+"
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
+
+
 runtime macros/matchit.vim
 
 :map <Leader>diff :VCSVimDiff<cr>
@@ -119,6 +123,8 @@ autocmd BufNewFile,BufRead *.rb,*.py,*.pl,*.sh vmap c :-1/^/s//#/<CR>
 " C, C++
 autocmd BufNewFile,BufRead *.h,*.c,*.cpp vmap u :-1/^\/\//s///<CR>
 autocmd BufNewFile,BufRead *.h,*.c,*.cpp vmap s :-1/^/s//\/\//<CR>
+
+au BufNewFile,BufRead *.hpp,*.cpp set filetype=cpp
 
 nmap <F3> :cp<enter>
 nmap <F4> :cn<enter>
@@ -132,6 +138,8 @@ map  gp "+p
 map  gP "+P
 
 runtime macros/gdb_mappings.vim
+
+autocmd BufNewFile,BufRead *.yml,*.yaml set shiftwidth=2
 
 " Fold at previous search pattern
 " User zr to display more, zm to display less
@@ -162,13 +170,19 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
 nmap <leader>todo :e ~/vimwiki/TODO.wiki<cr>
 
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 if has("gui_running")
   colorscheme solarized
+  set guifont=Monospace\ 10
   "set guifont=Lucida_Console:h8:cDEFAULT
   "set guicursor=a:blinkon0
   "set guioptions=bgmprT
 endif 
+
+"Close all but this window
+source ~/.vim/scripts/BufOnly.vim
 
