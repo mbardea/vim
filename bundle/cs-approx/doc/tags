@@ -1,3 +1,4 @@
+:CSApprox	CSApprox.txt	/*:CSApprox*
 :CSApproxSnapshot	CSApprox.txt	/*:CSApproxSnapshot*
 CSApprox.txt	CSApprox.txt	/*CSApprox.txt*
 csapprox	CSApprox.txt	/*csapprox*
@@ -41,6 +42,7 @@ csapprox.vim	CSApprox.txt	/*csapprox.vim*
 g:CSApprox_approximator_function	CSApprox.txt	/*g:CSApprox_approximator_function*
 g:CSApprox_attr_map	CSApprox.txt	/*g:CSApprox_attr_map*
 g:CSApprox_eterm	CSApprox.txt	/*g:CSApprox_eterm*
+g:CSApprox_fake_reverse	CSApprox.txt	/*g:CSApprox_fake_reverse*
 g:CSApprox_hook_post	CSApprox.txt	/*g:CSApprox_hook_post*
 g:CSApprox_hook_pre	CSApprox.txt	/*g:CSApprox_hook_pre*
 g:CSApprox_hook_{scheme}_post	CSApprox.txt	/*g:CSApprox_hook_{scheme}_post*
