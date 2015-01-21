@@ -177,7 +177,7 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 
 if has("gui_running")
   colorscheme solarized
-  set guifont=Monospace\ 10
+  set guifont=Monospace\ 9
   "set guifont=Lucida_Console:h8:cDEFAULT
   "set guicursor=a:blinkon0
   "set guioptions=bgmprT
